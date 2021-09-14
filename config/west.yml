@@ -1,10 +1,12 @@
 manifest:
   remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
     - name: joshajohnson
       url-base: https://github.com/joshajohnson
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: joshajohnson
       revision: chalice
       import: app/west.yml
   self:
