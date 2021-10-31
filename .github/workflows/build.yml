@@ -33,17 +33,17 @@ jobs:
         run: west update
       - name: West Zephyr export
         run: west zephyr-export
-      - name: West Build (CHALICE)
-        run: west build -s zmk/app -b nice_nano_v2 -- -DSHIELD=chalice -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
-      - name: CHALICE DTS File
+      - name: West Build (ENTROPY)
+        run: west build -s zmk/app -b entropy -- -DZMK_CONFIG="${GITHUB_WORKSPACE}/config"
+      - name: ENTROPY DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano_v2.dts.pre.tmp
-      - name: CHALICE Kconfig file
+        run: cat -n build/zephyr/entropy.dts.pre.tmp
+      - name: ENTROPY Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 chalice_nice_nano_v2.uf2
-      - name: Archive (CHALICE)
+        run: cp build/zephyr/zmk.uf2 entropy.uf2
+      - name: Archive (ENTROPY)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: chalice_nice_nano_v2.uf2
+          path: entropy.uf2
