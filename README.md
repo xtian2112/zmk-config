@@ -16,10 +16,15 @@ It enables building custom keymaps without having to go through the process of i
 - With the above done, head to your fork, select actions, and click on the latest build run. When it finishes, there will be an artifact called "firmware" you can download.
 
 ## Available Keymaps / Branches
+### Chalice
 - `chalice_nn2_default` Suggested layout for Chalice, running on a nice!nano v2
 - `chalice_nn_default` Suggested layout for Chalice, running on a nice!nano
+- `chalice_nn2_splitbs` Suggested split backspace layout for Chalice, running on a nice!nano v2
 - `chalice_nn2_josh` A Colemak layout with dedicated function and RGB layers, built for a n!n v2
 - `chalice_nn_josh` A Colemak layout with dedicated function and RGB layers, built for a n!n
+
+### Entropy
+- `entropy_josh` Colemak layout with split spacebar, numpad, and encoder support. 
 
 ## Making your own keymap / branch
 - First checkout the most similar branch to what you want (e.g. n!n or n!n v2, QWERTY vs Colemak) `git checkout <branch>`
